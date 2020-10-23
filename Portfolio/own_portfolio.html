@@ -27,7 +27,7 @@
       </nav>
       
 
-<h2>Bilder:</h2>
+<h2>Digital Artworks:</h2>
 <img src="./can_mappenarbeit.png" width="353" height="500">
 <img src="./Kyoto_logo_beide.png" width="353" height="500">
 <img src="./plakat_fukuoka.jpg" width="353" height="500">
@@ -51,6 +51,30 @@
     }
     h2 {
         color: rgb(217, 217, 217);
+    }
+    a {
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav-list {
+       display: grid;
+       grid-auto-flow: column;
+    }
+    .nav-list a{
+       display: block;
+       font-size: 30px;
+       color: gray;
     }
 </style>
 </html>
