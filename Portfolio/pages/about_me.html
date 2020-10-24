@@ -39,6 +39,33 @@
        font-size: 25px;
        color: rgb(255, 204, 153);
     }
+    #ball {
+      width: 100px;
+      height:100px;
+      position: relative;
+      border-radius: 50%;
+      background: linear-gradient(
+        90deg,
+        rgb(255, 102, 102),
+        rgb(179, 255, 179)
+      );
+      animation-name: huepfen;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes huepfen {
+      0% {
+        top: 0px;
+      }
+      50% {
+        top: 300px;
+        width: 130px;
+        height: 70px;
+      }
+      100% {
+        top: 0px;
+      }
+    }
 </style>
 </head>
 
@@ -66,6 +93,9 @@
 <p><i>Alter:</i> 19 Jahre</p>
 <p><i>Wohnort:</i> Furtwangen, Zweitwohnsitz: Mannheim</p>
 <p><i>Hochschule:</i> Hochschule Furtwangen</p>
+
+<div id="ball"></div>
+
 </body>
 
 </html>
