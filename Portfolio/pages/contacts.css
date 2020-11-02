@@ -55,3 +55,9 @@ nav {
 #mail:hover {
     transform: translateX(-8px);
 }
+#repository:hover {
+    transform: translateX(8px);
+}
+#aufgabe-1:hover {
+    transform: translateX(-8px);
+}
