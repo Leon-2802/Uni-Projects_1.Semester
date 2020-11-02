@@ -33,7 +33,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: rgb(255, 102, 102);
+    color: rgb(179, 255, 179);
     transition: transform 0.4s ease-out;
     font-size: 28px;
 }
@@ -46,7 +46,7 @@ nav {
     color: rgb(153, 255, 221);
 }
 .contact-btn:hover {
-    color: rgb(179, 255, 179);
+    color: rgb(255, 102, 102);
 }
 #github:hover {
     transform: translateX(-8px);
@@ -64,10 +64,10 @@ nav {
     transform: translateX(-8px);
 }
 #repository:hover {
-    color: rgb(179, 230, 255);
+    color: rgb(255, 153, 153);
     transform: translateX(8px);
 }
 #aufgabe-1:hover {
-    color: rgb(179, 230, 255);
+    color: rgb(255, 153, 153);
     transform: translateX(-8px);
 }
