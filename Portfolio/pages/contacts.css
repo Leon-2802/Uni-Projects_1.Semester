@@ -38,9 +38,11 @@ nav {
     font-size: 28px;
 }
 #repository {
+    font-size: 20px;
     color: rgb(217, 217, 217);
 }
 #aufgabe-1 {
+    font-size: 20px;
     color: rgb(217, 217, 217);
 }
 .contact-btn:hover {
