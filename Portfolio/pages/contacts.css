@@ -37,6 +37,12 @@ nav {
     transition: transform 0.4s ease-out;
     font-size: 28px;
 }
+#repository {
+    color: rgb(217, 217, 217);
+}
+#aufgabe-1 {
+    color: rgb(217, 217, 217);
+}
 .contact-btn:hover {
     color: rgb(179, 255, 179);
 }
@@ -56,8 +62,10 @@ nav {
     transform: translateX(-8px);
 }
 #repository:hover {
+    color: rgb(255, 191, 128);
     transform: translateX(8px);
 }
 #aufgabe-1:hover {
+    color: rgb(255, 191, 128);
     transform: translateX(-8px);
 }
