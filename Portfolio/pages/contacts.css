@@ -39,11 +39,11 @@ nav {
 }
 #repository {
     font-size: 20px;
-    color: rgb(217, 217, 217);
+    color: rgb(153, 255, 221);
 }
 #aufgabe-1 {
     font-size: 20px;
-    color: rgb(217, 217, 217);
+    color: rgb(153, 255, 221);
 }
 .contact-btn:hover {
     color: rgb(179, 255, 179);
@@ -64,10 +64,10 @@ nav {
     transform: translateX(-8px);
 }
 #repository:hover {
-    color: rgb(255, 191, 128);
+    color: rgb(179, 230, 255);
     transform: translateX(8px);
 }
 #aufgabe-1:hover {
-    color: rgb(255, 191, 128);
+    color: rgb(179, 230, 255);
     transform: translateX(-8px);
 }
