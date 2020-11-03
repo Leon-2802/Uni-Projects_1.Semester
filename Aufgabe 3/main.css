@@ -19,6 +19,7 @@ ul {
     background-color: red;
     top: 0;
     width: 350px;
+    display: flex;
     justify-content: right;
 }
 .nav-list {
@@ -30,4 +31,12 @@ ul {
     display: block;
     font-size: 20px;
     color: white;
+}
+img {
+    display: flex;
+    justify-content: center;
+}
+video {
+    display: flex;
+    justify-content: center;
 }
