@@ -3,3 +3,17 @@ body {
     background-repeat: repeat;
     font-family: sans-serif;
 }
+#navbar {
+    position: fixed;
+    z-index: 10;
+    background-color: red;
+    top: 0;
+    width: 25%;
+}
+#navbar a {
+    float: right;
+    display: block;
+    color: blue;
+    padding: 14px;
+    text-decoration: none;
+}
