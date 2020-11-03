@@ -38,10 +38,12 @@ ul {
     color: white;
 }
 img {
+    margin-left: 40vw;
     display: flex;
     justify-content: center;
 }
 video {
+    margin-left: 40vw;
     display: flex;
     justify-content: center;
 }
