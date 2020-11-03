@@ -1,0 +1,39 @@
+body {
+    background-image: url(https://raw.githubusercontent.com/gabriel-rausch/EIA1-Material/master/L03/task_material/images/bg.png);
+    background-repeat: repeat;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    margin-top: 70px;
+}
+#h3-box {
+    width: 500px;
+    height: 300px;
+    margin-left: 1000px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+#navbar {
+    position: fixed;
+    z-index: 10;
+    background-color: red;
+    top: 0;
+    width: 350px;
+    display: flex;
+    justify-content: right;
+}
+.nav-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 35px;
+}
+.nav-list a{
+    display: block;
+    font-size: 20px;
+    color: white;
+}
