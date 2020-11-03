@@ -15,7 +15,6 @@ ul {
     background-color: red;
     top: 0;
     width: 25%;
-    display: block;
     justify-content: right;
 }
 .nav-list {
