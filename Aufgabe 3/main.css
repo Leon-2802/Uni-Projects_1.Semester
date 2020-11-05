@@ -23,7 +23,8 @@ ul {
     z-index: 10;
     background-color: red;
     top: 0;
-    width: 350px;
+    width: 380px;
+    margin-left: 1200px;
     display: flex;
     justify-content: right;
 }
