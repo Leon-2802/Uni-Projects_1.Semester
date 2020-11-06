@@ -8,6 +8,7 @@ h1{
     margin-top: 70px;
 }
 #banner {
+    margin-left: 30%;
     width: 45%;
     height: 25vh;
     background-color: aquamarine;
@@ -15,7 +16,7 @@ h1{
 #h3-box {
     width: 500px;
     height: 300px;
-    margin-left: 1000px;
+    margin-left: 55%;
 }
 a {
     text-decoration: none;
@@ -29,7 +30,6 @@ ul {
     justify-content: -10%;
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
     display: grid;
     grid-auto-flow: column;
     grid-gap: 5px;
@@ -39,21 +39,22 @@ ul {
     color: white;
     background-color:#3C5179;
     height: 50px;
-    width: 30%;
-    margin-left: 67%;
-    float: inline-start;
-    z-index: 2;
+    width: 20%;
+    margin-left: 63%;
+    z-index: 10;
   }  
 .nav-list a:hover {
     color: antiquewhite;
     transition: 0.5s;
 }
 img {
+    margin-left: 30vw;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 video {
+    margin-left: 30vw;
    margin-bottom: 20px;
    display: flex;
    justify-content: center;
