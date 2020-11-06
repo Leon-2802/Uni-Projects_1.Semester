@@ -44,6 +44,10 @@ ul {
     float: inline-start;
     z-index: 2;
   }  
+.nav-list a:hover {
+    color: antiquewhite;
+    transition: 0.5s;
+}
 img {
     margin-bottom: 20px;
     display: flex;
