@@ -7,6 +7,11 @@ h1{
     text-align: center;
     margin-top: 70px;
 }
+#banner {
+    width: 45%;
+    height: 25vh;
+    background-color: aquamarine;
+}
 #h3-box {
     width: 500px;
     height: 300px;
@@ -17,33 +22,41 @@ a {
 }
 ul {
     list-style: none;
-}
-#navbar {
-    position: fixed;
-    z-index: 10;
-    background-color: red;
-    top: 0;
-    width: 350px;
-    display: flex;
-    justify-content: right;
+    color: #FFFFFF;
 }
 .nav-list {
+    position: fixed;
+    justify-content: -10%;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 35px;
-}
-.nav-list a{
-    display: block;
-    font-size: 20px;
+    grid-gap: 5px;
+    margin-top: -1%;
+    margin-bottom: 100%;
+    margin-right: 0%;
     color: white;
-}
+    background-color:#3C5179;
+    height: 50px;
+    width: 30%;
+    margin-left: 67%;
+    float: inline-start;
+    z-index: 2;
+  }  
 img {
-    margin-left: 40vw;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 video {
-    margin-left: 40vw;
-    display: flex;
-    justify-content: center;
+   margin-bottom: 20px;
+   display: flex;
+   justify-content: center;
+}
+h2 {
+   margin-left: 30vw;
+}
+#facebook {
+    margin-left: 1200px;
 }
