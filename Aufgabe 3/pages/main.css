@@ -27,7 +27,6 @@ ul {
 }
 .nav-list {
     position: fixed;
-    justify-content: -10%;
     align-items: center;
     flex-direction: row;
     display: grid;
