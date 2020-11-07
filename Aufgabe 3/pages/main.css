@@ -8,19 +8,25 @@ body {
     font-family: sans-serif;
 }
 h1{
+    font-size: 100px;
+    font-weight: bold;
     text-align: center;
+    color: rgb(131, 47, 47);
 }
 #banner {
     margin-left: 30%;
     width: 45%;
-    height: 45vh;
-    background-color: rgb(255, 153, 128);
+    height: 35vh;
+    background-color: rgb(255, 194, 179);
+    box-shadow: 5px 10px rgb(131, 47, 47);
     margin-bottom: 15vh;
+    border-radius: 0px 0px 5% 5%;
 }
 #h3-box {
     width: 500px;
     height: 500px;
     margin-left: 55%;
+    margin-top: 5vh;
     margin-bottom: 5vh;
 }
 a {
@@ -36,19 +42,29 @@ ul {
     flex-direction: row;
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 5px;
     margin-top: 0;
     margin-right: 5%;
     color: white;
-    background-color:#3C5179;
+    background-color:rgb(255, 170, 128);
     height: 50px;
     width: 20%;
-    margin-left: 63%;
+    padding-left: 4%;
+    margin-left: 70%;
     z-index: 10;
-  }  
+  } 
+.nav-list a {
+    color: rgb(131, 47, 47);
+    transition: 1s;
+}
+#marked {
+    color: rgb(255, 214, 204);
+} 
 .nav-list a:hover {
-    color: antiquewhite;
-    transition: 0.5s;
+    color: rgb(255, 214, 204);
+}
+h2 {
+    margin-left: 30vw;
+    margin-bottom: 20px;
 }
 img {
     margin-left: 30vw;
@@ -61,9 +77,6 @@ video {
    margin-bottom: 20px;
    display: flex;
    justify-content: center;
-}
-h2 {
-   margin-left: 30vw;
 }
 #facebook {
     margin-left: 1200px;
