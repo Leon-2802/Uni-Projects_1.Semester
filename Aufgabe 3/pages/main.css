@@ -101,7 +101,7 @@ video {
     margin-left: 15%;
 }
 .daten {
-    width: 40%;
+    width: 25%;
     padding: 7px;
     margin-bottom: 10px;
     background-color: rgb(255, 214, 204);
@@ -123,13 +123,13 @@ textarea:focus {
     box-shadow: 0 0 0 1px rgb(255, 194, 179, 0.5);
 }
 #datenschutz {
-    margin-left: 18%;
+    margin-left: 15%;
 }
 #submit {
     font-size: 16x;
-    width: 32%;
+    width: 16%;
     height: 25px;
-    margin-left: 16.5%;
+    margin-left: 15%;
     background-color: rgb(255, 214, 204);
     transition: background-color 1s ease-out;
 }
