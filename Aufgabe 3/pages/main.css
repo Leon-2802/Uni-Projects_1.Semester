@@ -32,8 +32,14 @@ h1{
 }
 #facebook {
     position: relative;
-    top: 29vh;
+    top: 30vh;
     left: 3%;
+    z-index: 10;
+}
+#instagram {
+    position: relative;
+    top: 25.4vh;
+    left: 5%;
     z-index: 10;
 }
 a {
