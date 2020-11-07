@@ -46,7 +46,7 @@ ul {
     margin-right: 5%;
     color: white;
     background-color:rgb(255, 170, 128);
-    height: 50px;
+    height: 5%;
     width: 20%;
     padding-left: 4%;
     margin-left: 70%;
@@ -62,7 +62,7 @@ ul {
 .nav-list a:hover {
     color: rgb(255, 214, 204);
 }
-h2 {
+.margin-h2 {
     margin-left: 30vw;
     margin-bottom: 20px;
 }
@@ -80,4 +80,10 @@ video {
 }
 #facebook {
     margin-left: 1200px;
+}
+
+/* about-me-speziell */
+
+main {
+    text-align: center;
 }
