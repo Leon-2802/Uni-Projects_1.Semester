@@ -64,6 +64,11 @@ ul {
     transition: color 0.5s;
     cursor: pointer;
 }
+#info {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 50px;
+}
 .margin-h2 {
     color: rgb(131, 47, 47);
     margin-left: 26vw;
@@ -80,6 +85,13 @@ video {
    margin-bottom: 20px;
    display: flex;
    justify-content: center;
+}
+.caption {
+    text-align: center;
+    color: rgb(131, 47, 47);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 #facebook {
     margin-left: 1200px;
