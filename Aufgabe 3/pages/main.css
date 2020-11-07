@@ -32,23 +32,28 @@ h1{
 }
 #facebook {
     position: relative;
-    top: 30vh;
+    top: 32vh;
     left: 3%;
     z-index: 10;
-    transition: transform 0.4s ease-out;
 }
-#facebook:hover {
-    transform: translateY(8px);
+#icon {
+    opacity: 50%;
+    transition: opacity 0.4s ease-out;
+}
+#icon:hover {
+    opacity: 100%;
 }
 #instagram {
     position: relative;
-    top: 25.4vh;
+    top: 27.4vh;
     left: 5%;
-    z-index: 10;
-    transition: transform 0.4s ease-out;
 }
-#instagram:hover {
-    transform: translateY(8px);
+#icon2 {
+    opacity: 50%;
+    transition: opacity 0.4s ease-out; 
+}
+#icon2:hover {
+    opacity: 100%;
 }
 a {
     text-decoration: none;
@@ -111,9 +116,6 @@ video {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
-}
-#facebook {
-    margin-left: 1200px;
 }
 
 /* about-me-speziell */
