@@ -14,6 +14,7 @@ h1{
     color: rgb(131, 47, 47);
 }
 #banner {
+    position: absolute;
     margin-left: 26%;
     width: 45%;
     height: 35vh;
@@ -28,6 +29,12 @@ h1{
     margin-left: 55%;
     margin-top: 5vh;
     margin-bottom: 5vh;
+}
+#facebook {
+    position: relative;
+    top: 29vh;
+    left: 3%;
+    z-index: 10;
 }
 a {
     text-decoration: none;
@@ -64,10 +71,8 @@ ul {
     transition: color 0.5s;
     cursor: pointer;
 }
-#info {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 50px;
+main {
+    margin-top: 40vh;
 }
 .margin-h2 {
     color: rgb(131, 47, 47);
