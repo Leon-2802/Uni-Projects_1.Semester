@@ -54,13 +54,15 @@ ul {
   } 
 .nav-list a {
     color: rgb(131, 47, 47);
-    transition: 1s;
+    transition: color 1s ease-out;
 }
 #marked {
     color: rgb(255, 214, 204);
 } 
 .nav-list a:hover {
     color: rgb(255, 214, 204);
+    transition: color 0.5s;
+    cursor: pointer;
 }
 .margin-h2 {
     margin-left: 30vw;
@@ -86,4 +88,47 @@ video {
 
 main {
     text-align: center;
+}
+
+/* contact-speziell */
+#container {
+    margin-left: 15%;
+}
+.daten {
+    width: 40%;
+    padding: 7px;
+    margin-bottom: 10px;
+    background-color: rgb(230, 230, 230);
+}
+.daten:focus {
+    border-color: rgb(255, 194, 179);
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(255, 194, 179, 0.5);
+}
+textarea {
+    width: 40%;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: rgb(230, 230, 230);
+}
+textarea:focus {
+    border-color: rgb(255, 194, 179);
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(255, 194, 179, 0.5);
+}
+#datenschutz {
+    margin-left: 18%;
+}
+#submit {
+    font-size: 16x;
+    width: 32%;
+    height: 25px;
+    margin-left: 16.5%;
+    background-color: rgb(230, 230, 230);
+    transition: background-color 1s ease-out;
+}
+#submit:hover {
+    background-color: rgb(255, 214, 204);
+    transition: background-color 0.5s;
+    cursor: pointer;
 }
