@@ -65,6 +65,7 @@ ul {
     cursor: pointer;
 }
 .margin-h2 {
+    color: rgb(131, 47, 47);
     margin-left: 26vw;
     margin-bottom: 20px;
 }
@@ -92,6 +93,7 @@ video {
 
 /* contact-speziell */
 #form-header {
+    color: rgb(131, 47, 47);
     margin-left: 15%;
     margin-bottom: 2%;
 }
