@@ -104,7 +104,7 @@ video {
     width: 40%;
     padding: 7px;
     margin-bottom: 10px;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 214, 204);
 }
 .daten:focus {
     border-color: rgb(255, 194, 179);
@@ -115,7 +115,7 @@ textarea {
     width: 40%;
     height: 100px;
     margin-bottom: 10px;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 214, 204);
 }
 textarea:focus {
     border-color: rgb(255, 194, 179);
@@ -130,11 +130,11 @@ textarea:focus {
     width: 32%;
     height: 25px;
     margin-left: 16.5%;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 214, 204);
     transition: background-color 1s ease-out;
 }
 #submit:hover {
-    background-color: rgb(255, 214, 204);
+    background-color: rgb(255, 170, 128);
     transition: background-color 0.5s;
     cursor: pointer;
 }
