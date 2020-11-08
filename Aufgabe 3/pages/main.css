@@ -30,30 +30,15 @@ h1{
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
-#facebook {
+h3 {
+    color: rgb(131, 47, 47);
+}
+#stamp {
     position: relative;
-    top: 32vh;
-    left: 3%;
-    z-index: 10;
-}
-#icon {
-    opacity: 50%;
-    transition: opacity 0.4s ease-out;
-}
-#icon:hover {
-    opacity: 100%;
-}
-#instagram {
-    position: relative;
-    top: 27.4vh;
-    left: 5%;
-}
-#icon2 {
-    opacity: 50%;
-    transition: opacity 0.4s ease-out; 
-}
-#icon2:hover {
-    opacity: 100%;
+    width: 150px;
+    height: 150px;
+    top: 15vh;
+    right: 2vw;
 }
 a {
     text-decoration: none;
@@ -61,6 +46,33 @@ a {
 ul {
     list-style: none;
     color: #FFFFFF;
+}
+#icon {
+    position: absolute;
+    left: 12%;
+    top: 31vh;
+    transition: opacity 0.4s ease-out;
+}
+#icon:hover {
+    opacity: 50%;
+}
+#icon2 {
+    position: absolute;
+    left: 14%;
+    top: 31vh;
+    transition: opacity 0.4s ease-out;
+}
+#icon2:hover {
+    opacity: 50%;
+}
+#icon3 {
+    position: absolute;
+    left: 16%;
+    top: 31vh;
+    transition: opacity 0.4s ease-out;
+}
+#icon3:hover {
+    opacity: 50%;
 }
 .nav-list {
     position: fixed;
