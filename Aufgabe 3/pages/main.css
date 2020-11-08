@@ -31,7 +31,7 @@ h1{
     margin-bottom: 5vh;
 }
 h3 {
-    color: rgb(131, 47, 47);
+    color: rgb(77, 77, 77);
 }
 #stamp {
     position: relative;
@@ -84,6 +84,7 @@ ul {
     margin-right: 5%;
     color: white;
     background-color:rgb(255, 170, 128);
+    box-shadow: 5px 5px rgb(153, 61, 0);
     height: 5%;
     width: 20%;
     padding-left: 4%;
