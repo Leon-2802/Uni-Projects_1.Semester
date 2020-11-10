@@ -2,19 +2,26 @@ body {
     background-image: url(https://raw.githubusercontent.com/gabriel-rausch/EIA1-Material/master/L04/task_material/Station_1_Positionierung/images/bg.png);
     background-repeat: repeat;
     font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
 }
-#box {
-    margin: 15% auto;
-    width: 32.8%;
-    height: 40.9%;
+#karte {
+    display: block;
+    position: relative;
+    
+}
+#karten-text {
+    color: white;
+    position: absolute;
+    width: 400px;
+    padding: 30px 50px 0px 75px;
+}
+img{
+    position: absolute;
 }
 #plant {
-    position: absolute;
-    bottom: 60%;
-    left: 30%;
-}
-#penguin {
-    position: absolute;
-    top: 50%;
-    right: 32%;
+    bottom: 50%;
+    left: 46%;
 }
