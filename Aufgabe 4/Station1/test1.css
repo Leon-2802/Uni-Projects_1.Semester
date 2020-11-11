@@ -1,5 +1,5 @@
 body{
-    background-image: url(../images/bg.png);   
+    background-image: url(bg.png);   
     height: 750px;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@ body{
     position: absolute;
 }
 .busch_png{
-    top: -65px;
+    top: -58px;
     left: -65px;
 }
 .pinguin_png{
