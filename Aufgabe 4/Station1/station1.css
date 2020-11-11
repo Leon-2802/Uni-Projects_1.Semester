@@ -19,6 +19,13 @@ body {
     width: 400px;
     padding: 30px 50px 0px 75px;
 }
-#karten-pics img{
+#plant {
     position: absolute;
+    top: 0;
+    left:0;
+}
+#penguin {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

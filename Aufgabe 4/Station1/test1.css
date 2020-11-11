@@ -1,0 +1,33 @@
+body{
+    background-image: url(../images/bg.png);   
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.karte{
+    display: block;
+    position: relative;
+}
+.karte_txt{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:30px 50px 50px 75px;
+    width: 400px;
+}
+.karte_txt p{
+    margin: 30px 0;
+}
+.karte_pic img{
+    position: absolute;
+}
+.busch_png{
+    top: -65px;
+    left: -65px;
+}
+.pinguin_png{
+    bottom: -30px;
+    right: -30px;
+}
