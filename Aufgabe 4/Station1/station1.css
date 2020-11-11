@@ -14,13 +14,11 @@ body {
 #karten-text {
     color: white;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 400px;
     padding: 30px 50px 0px 75px;
 }
-img{
+#karten-pics img{
     position: absolute;
-}
-#plant {
-    bottom: 50%;
-    left: 46%;
 }
