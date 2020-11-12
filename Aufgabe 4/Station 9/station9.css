@@ -1,0 +1,83 @@
+body {
+    background-image: url(bg.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+}
+.karte {
+    display: block;
+    position: relative;
+}
+.karten-txt{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 70px 50px 50px 65px;
+    width: 500px;
+}
+.karten-pics img{
+    position: absolute;
+}
+
+/* Bilder positionen */
+
+#banderole {
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+#flocke1 {
+    top: 5%;
+    left: 10%;
+    animation-name: schneller;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#flocke2 {
+    top: 5%;
+    right: 20%;
+    animation-name: langsamer;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#flocke3 {
+    top: 5%;
+    right: 40%;
+    animation-name: schneller;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#flocke4 {
+    top: 5%;
+    left: 20%;
+    animation-name: langsamer;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Animation-Rules */
+
+@keyframes schneller {
+    0% {
+        top: 5%;
+    }
+    100% {
+        top: 90%;
+    }
+}
+
+@keyframes langsamer {
+    0% {
+        top: 5%;
+    }
+    100% {
+        top: 85%;
+    }
+}
