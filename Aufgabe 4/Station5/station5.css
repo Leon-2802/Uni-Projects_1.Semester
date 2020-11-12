@@ -5,3 +5,48 @@ body {
     justify-content: center;
     height: 800px;
 }
+.karte {
+    display: block;
+    position: relative;
+}
+.karten-form {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 60px 60px 60px;
+}
+#name {
+    width: 50%;
+    height: 20px;
+}
+#name:focus {
+    border-color: rgb(255, 255, 230);
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(255, 255, 230, 0.5);
+}
+#nachricht {
+    width: 90%;
+    height: 60px;
+}
+#nachricht:focus {
+    border-color: rgb(245, 222, 179);
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(245, 222, 179, 0.5);
+}
+.form-radio {
+    transition: all 0.4s ease-out;
+}
+.form-radio:checked {
+    transform: scale(1.4);
+}
+button {
+    margin-top: 5%;
+    background-color: rgb(255, 255, 230);
+    transition: all 0.4s ease-out;
+}
+button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(255, 255, 230, 0);
+}
