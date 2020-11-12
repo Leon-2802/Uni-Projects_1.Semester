@@ -23,12 +23,21 @@
                     </div>
                     <br><br>
                     <div class="form-group">
-                        <label for="name">Deine Nachricht an den Weihnachtsmann</label>
+                        <label for="nachricht">Deine Nachricht an den Weihnachtsmann</label>
+                        <input id="nachricht" class="form-input" type="text" required>
                     </div>
-
+                    <div class="form-group">
+                        <p>Willst du auch ein Geschenk?</p>
+                        <label class="checkbox-label"><input name="geschenk" class="form-input" value="ja" type="radio" required>Ja</label>
+                        <label class="checkbox-label"><input name="geschenk" class="form-input" value="nein" type="radio" required>Nein</label>
+                    </div>
+                    <button id="senden" type="submit">Absenden</button>
                 </form>
             </div>
+
         </div>
+        
     </div>
+
 </body>
 </html>
