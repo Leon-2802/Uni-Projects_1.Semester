@@ -1,0 +1,17 @@
+body {
+    background-image: url(bg.png);
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.karte {
+    display: block;
+    position: relative;
+}
+#banderole {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
