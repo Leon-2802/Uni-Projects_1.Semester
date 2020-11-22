@@ -1,9 +1,9 @@
 //Werte Afrika
-var afrika2018 : number = 1235.5;
+var afrika2018 = 1235.5;
 var afrika2008 = 1028;
 //Werte Südamerika
-var sa2018 : number = 1261.5;
-var sa2008 : number = 1132.6;
+var sa2018 = 1261.5;
+var sa2008 = 1132.6;
 //Werte Europa
 var euro2018 = 4209.3;
 var euro2008 = 4965.7;
@@ -16,7 +16,6 @@ var asien2008 = 12954.7;
 //Werte Australien
 var austr2018 = 2100.5;
 var austr2008 = 1993;
-
 //Berechnungen:
 var emissionenGesamt = afrika2018 + sa2018 + euro2018 + na2018 + asien2018 + austr2018;
 //Afrika
@@ -43,7 +42,6 @@ var wertAsienVergl = (asien2018 - asien2008).toFixed(1);
 var prozentAustrGes = ((austr2018 / emissionenGesamt) * 100).toFixed(1);
 var prozentAustrVergl = (((austr2018 / austr2008) - 1) * 100).toFixed(1);
 var wertAustrVergl = (austr2018 - austr2008).toFixed(1);
-
 //Konsolenausgabe Afrika:
 console.log('Die Emission von Afrika ist: ' + afrika2018 + 'kg CO2.');
 console.log('Relativ zur Gesamtemission der Welt verursacht Afrika damit ' + prozentAfrikaGes + '%.');
@@ -53,7 +51,7 @@ console.log('2018 im Vergleich zu 2008 sind das ' + wertAfrikaVergl + 'kg CO2.')
 console.log('Die Emission von Südamerika ist: ' + sa2018 + 'kg CO2.');
 console.log('Relativ zur Gesamtemission der Welt verursacht Südamerika damit ' + prozentSaGes + '%');
 console.log('Für Südamerika hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentSaVergl + '% verändert.');
-console.log('2018 im Vergleich zu 2008 sind das ' + wertSaVergl + 'kg CO2.'); 
+console.log('2018 im Vergleich zu 2008 sind das ' + wertSaVergl + 'kg CO2.');
 //Konsolenausgabe Europa
 console.log('Die Emission von Europa ist: ' + euro2018 + 'kg CO2.');
 console.log('Relativ zur Gesamtemission der Welt verursacht Europa damit ' + prozentEuroGes + '%.');
@@ -74,20 +72,17 @@ console.log('Die Emission von Australien ist: ' + austr2018 + 'kg CO2.');
 console.log('Relativ zur Gesamtemission der Welt verursacht Australien damit ' + prozentAustrGes + '%.');
 console.log('Für Australien hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentAustrVergl + '% verändert.');
 console.log('2018 im Vergleich zu 2008 sind das ' + wertAustrVergl + 'kg CO2.');
-
-
 //Event und Fuktion Europa:
-
 //Event und Function Nordamerika:
 function northAmerica() {
-        document.querySelector("#h2-1").innerHTML = "6035.6";
-        document.querySelector("#h2-2").innerHTML = "19.4%";
-        document.querySelector("#h2-3").innerHTML = "-8.6%";
-        document.querySelector("#h2-4").innerHTML = "-564.8";
-        document.querySelector("#section1-p").innerHTML = "Emission absolute of North America in 2018";
-    }
-    
-window.addEventListener('load', function() {
+    document.querySelector("#h2-1").innerHTML = "6035.6";
+    document.querySelector("#h2-2").innerHTML = "19.4%";
+    document.querySelector("#h2-3").innerHTML = "-8.6%";
+    document.querySelector("#h2-4").innerHTML = "-564.8";
+    document.querySelector("#section1-p").innerHTML = "Emission absolute of North America in 2018";
+}
+window.addEventListener('load', function () {
     document.querySelector(".northamerica").addEventListener("click", northAmerica);
 });
 //Function und Event Südamerika:
+//# sourceMappingURL=emission2.js.map
