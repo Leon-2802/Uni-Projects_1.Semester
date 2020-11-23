@@ -42,47 +42,76 @@ var wertAsienVergl = (asien2018 - asien2008).toFixed(1);
 var prozentAustrGes = ((austr2018 / emissionenGesamt) * 100).toFixed(1);
 var prozentAustrVergl = (((austr2018 / austr2008) - 1) * 100).toFixed(1);
 var wertAustrVergl = (austr2018 - austr2008).toFixed(1);
-//Konsolenausgabe Afrika:
-console.log('Die Emission von Afrika ist: ' + afrika2018 + 'kg CO2.');
-console.log('Relativ zur Gesamtemission der Welt verursacht Afrika damit ' + prozentAfrikaGes + '%.');
-console.log('Für Afrika hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentAfrikaVergl + '% verändert.');
-console.log('2018 im Vergleich zu 2008 sind das ' + wertAfrikaVergl + 'kg CO2.');
-//Konsolenausgabe Südamerika
-console.log('Die Emission von Südamerika ist: ' + sa2018 + 'kg CO2.');
-console.log('Relativ zur Gesamtemission der Welt verursacht Südamerika damit ' + prozentSaGes + '%');
-console.log('Für Südamerika hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentSaVergl + '% verändert.');
-console.log('2018 im Vergleich zu 2008 sind das ' + wertSaVergl + 'kg CO2.');
-//Konsolenausgabe Europa
-console.log('Die Emission von Europa ist: ' + euro2018 + 'kg CO2.');
-console.log('Relativ zur Gesamtemission der Welt verursacht Europa damit ' + prozentEuroGes + '%.');
-console.log('Für Europa hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentEuroVergl + '% verändert.');
-console.log('2018 im Vergleich zu 2008 sind das ' + wertEuroVergl + 'kg CO2.');
-//Konsolenausgabe Nordamerika
-console.log('Die Emission von Nordamerika ist: ' + na2018 + 'kg CO2.');
-console.log('Relativ zur Gesamtemission der Welt verursacht Nordamerika damit ' + prozentNaGes + '%.');
-console.log('Für Nordamerika hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentNaVergl + '% verändert.');
-console.log('2018 im Vergleich zu 2008 sind das ' + wertNaVergl + 'kg CO2.');
-//Konsolenausgabe Asien
-console.log('Die Emission von Asien ist: ' + asien2018 + 'kg CO2.');
-console.log('Relativ zur Gesamtesmission der Welt verursacht Asien damit ' + prozentAsienGes + '%.');
-console.log('Für Asien hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentAsienVergl + '% verändert.');
-console.log('2018 im Vergleich zu 2008 sind das ' + wertAsienVergl + 'kg CO2.');
-//Konsolenausgabe Australien
-console.log('Die Emission von Australien ist: ' + austr2018 + 'kg CO2.');
-console.log('Relativ zur Gesamtemission der Welt verursacht Australien damit ' + prozentAustrGes + '%.');
-console.log('Für Australien hat sich 2018 die Emission im Vergleich zu 2008 um ' + prozentAustrVergl + '% verändert.');
-console.log('2018 im Vergleich zu 2008 sind das ' + wertAustrVergl + 'kg CO2.');
-//Event und Fuktion Europa:
+//Event und Function Europa:
+function europe() {
+    document.querySelector("#titleRegion").innerHTML = "Europe";
+    document.querySelector("#h2-1").innerHTML = euro2018;
+    document.querySelector("#h2-2").innerHTML = prozentEuroGes + "%";
+    document.querySelector("#h2-3").innerHTML = prozentEuroVergl + "%";
+    document.querySelector("#h2-4").innerHTML = wertEuroVergl;
+    document.querySelector("#section1-p").innerHTML = "Emission absolute of Europe in 2018";
+}
+window.addEventListener('load', function () {
+    document.querySelector(".europe").addEventListener("click", europe);
+});
 //Event und Function Nordamerika:
 function northAmerica() {
-    document.querySelector("#h2-1").innerHTML = "6035.6";
-    document.querySelector("#h2-2").innerHTML = "19.4%";
-    document.querySelector("#h2-3").innerHTML = "-8.6%";
-    document.querySelector("#h2-4").innerHTML = "-564.8";
+    document.querySelector("#titleRegion").innerHTML = "North America";
+    document.querySelector("#h2-1").innerHTML = na2018;
+    document.querySelector("#h2-2").innerHTML = prozentNaGes + "%";
+    document.querySelector("#h2-3").innerHTML = prozentNaVergl + "%";
+    document.querySelector("#h2-4").innerHTML = wertNaVergl;
     document.querySelector("#section1-p").innerHTML = "Emission absolute of North America in 2018";
 }
 window.addEventListener('load', function () {
     document.querySelector(".northamerica").addEventListener("click", northAmerica);
 });
 //Function und Event Südamerika:
+function southAmerica() {
+    document.querySelector("#titleRegion").innerHTML = "South America";
+    document.querySelector("#h2-1").innerHTML = sa2018;
+    document.querySelector("#h2-2").innerHTML = prozentSaGes + "%";
+    document.querySelector("#h2-3").innerHTML = prozentSaVergl + "%";
+    document.querySelector("#h2-4").innerHTML = wertSaVergl;
+    document.querySelector("#section1-p").innerHTML = "Emission absolute of South America in 2018";
+}
+window.addEventListener('load', function () {
+    document.querySelector(".southamerica").addEventListener("click", southAmerica);
+});
+//Function und Event Afrika:
+function africa() {
+    document.querySelector("#titleRegion").innerHTML = "Africa";
+    document.querySelector("#h2-1").innerHTML = afrika2018;
+    document.querySelector("#h2-2").innerHTML = prozentAfrikaGes + "%";
+    document.querySelector("#h2-3").innerHTML = prozentAfrikaVergl + "%";
+    document.querySelector("#h2-4").innerHTML = wertAfrikaVergl;
+    document.querySelector("#section1-p").innerHTML = "Emission absolute of Africa in 2018";
+}
+window.addEventListener('load', function () {
+    document.querySelector(".africa").addEventListener("click", africa);
+});
+//Function und Event Asien:
+function asia() {
+    document.querySelector("#titleRegion").innerHTML = "Asia";
+    document.querySelector("#h2-1").innerHTML = asien2018;
+    document.querySelector("#h2-2").innerHTML = prozentAsienGes + "%";
+    document.querySelector("#h2-3").innerHTML = prozentAsienVergl + "%";
+    document.querySelector("#h2-4").innerHTML = wertAsienVergl;
+    document.querySelector("#section1-p").innerHTML = "Emission absolute of Asia in 2018";
+}
+window.addEventListener('load', function () {
+    document.querySelector(".asia").addEventListener("click", asia);
+});
+//Function und Event Australien:
+function australia() {
+    document.querySelector("#titleRegion").innerHTML = "Australia";
+    document.querySelector("#h2-1").innerHTML = austr2018;
+    document.querySelector("#h2-2").innerHTML = prozentAustrGes + "%";
+    document.querySelector("#h2-3").innerHTML = prozentAustrVergl + "%";
+    document.querySelector("#h2-4").innerHTML = wertAustrVergl;
+    document.querySelector("#section1-p").innerHTML = "Emission absolute of Australia in 2018";
+}
+window.addEventListener('load', function () {
+    document.querySelector(".australia").addEventListener("click", australia);
+});
 //# sourceMappingURL=emission2.js.map
