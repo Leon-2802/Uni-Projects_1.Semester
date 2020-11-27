@@ -12,8 +12,14 @@ nav {
     margin-bottom: 60px;
 }
 
+img {
+    transition: all 0.4s ease-out;
+    opacity: 70%;
+}
+
 img:hover {
     cursor: pointer;
+    opacity: 100%;
 }
 
 section {
@@ -27,14 +33,33 @@ section {
     display: inline-block;
     width: 50px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgb(153, 153, 153);
+    left: 8%;
 }
-.chartWrapper .chart {
+
+.chart1 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 20%;
-    background: white;
+    height: 0%;
+    background: rgb(89, 89, 89);
+}
+
+.chartWrapper2 {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    background: rgb(153, 153, 153);
+    right: 8%;
+}
+
+.chart2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: rgb(89, 89, 89);
 }
 
 footer p {
