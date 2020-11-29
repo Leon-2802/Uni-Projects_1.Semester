@@ -62,7 +62,7 @@ function reusableFunction(continent, continent2018, continent2008) {
     document.querySelector("#absolute2018").innerHTML = continent2018 + "kg CO2";
     document.querySelector("#relative-percent").innerHTML = ((continent2018 / emissionenGesamt) * 100).toFixed(1) + "%";
     document.querySelector("#growth-rate").innerHTML = (((continent2018 / continent2008) - 1) * 100).toFixed(1) + "%";
-    document.querySelector("#rate-absolute").innerHTML = (continent2008 - continent2018).toFixed(1) + "kg CO2";
+    document.querySelector("#rate-absolute").innerHTML = (continent2018 - continent2008).toFixed(1) + "kg CO2";
     //Diagramm-Anpassung:
     document.querySelector('.chart2').setAttribute('style', 'height:' + ((continent2018 / emissionenGesamt) * 100) + '%');
     document.querySelector('.chart1').setAttribute('style', 'height:' + (((continent2018 / continent2008) - 1) * 100) + '%');
