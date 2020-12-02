@@ -58,6 +58,7 @@ window.addEventListener('load', function() {
 });
 
 //Wiederverwendbare Funktion:
+
 function reusableFunction(continent, continent2018, continent2008) {
     document.querySelector("#titleRegion").innerHTML = continent;
     document.querySelector("#titleRegion2").innerHTML = continent;

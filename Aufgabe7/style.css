@@ -1,0 +1,61 @@
+html{
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(102, 102, 102), rgb(77, 77, 77));
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drum-flexbox {
+    display: flex;
+    width: 500px;
+    height: 650px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.drumbutton {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+}
+.drumbutton:hover {
+    cursor: pointer;
+}
+#play-button:hover {
+    cursor: pointer;
+}
+
+/*Drum-buttons style*/
+#drum1 {
+    background-color: #D9FFB3;
+}
+#drum2 {
+    background-color: #B3FFD9;
+}
+#drum3 {
+    background-color: #FFB3B3;
+}
+#drum4 {
+    background-color: #CCFFFF;
+}
+#drum5 {
+    background-color: #FFFFCC;
+}
+#drum6 {
+    background-color: #FFCCFF;
+}
+#drum7 {
+    background-color: #FFE6CC;
+}
+#drum8 {
+    background-color: #E6FFCC;
+}
+#drum9 {
+    background-color: #B3FFD9;
+}
