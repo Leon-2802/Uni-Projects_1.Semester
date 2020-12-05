@@ -57,6 +57,8 @@ beat[0] = new Audio('./L07/task_material/assets/kick.mp3');
 beat[1] = new Audio('./L07/task_material/assets/snare.mp3');
 beat[2] = new Audio('./L07/task_material/assets/hihat.mp3');
 
+var myIntervall;
+
 document.querySelector('#play-button').addEventListener("click", function () {
     definedBeat();
 });
@@ -67,5 +69,5 @@ function definedBeat() {
     beat[1].play();
     beat[2].play();
     //Intervall zwischen den Sounds definiert:
-    var myIntervall = setInterval(definedBeat, 500);
+    myIntervall = setInterval(definedBeat, 500);
 }

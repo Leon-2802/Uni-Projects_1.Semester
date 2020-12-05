@@ -27,8 +27,13 @@ body {
 .drumbutton:hover {
     cursor: pointer;
 }
+
+#play-button {
+    opacity: 70%;
+}
 #play-button:hover {
     cursor: pointer;
+    opacity: 100%;
 }
 
 /*Drum-buttons style*/
