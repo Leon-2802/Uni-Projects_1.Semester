@@ -1,4 +1,4 @@
-var sounds = [];
+let sounds = [];
 sounds[0] = new Audio('./L07/task_material/assets/A.mp3');
 sounds[1] = new Audio('L07/task_material/assets/C.mp3');
 sounds[2] = new Audio('./L07/task_material/assets/F.mp3');
@@ -52,12 +52,12 @@ function playSample(x :number) {
 }
 
 //Beat-Array:
-var beat = [];
+let beat = [];
 beat[0] = new Audio('./L07/task_material/assets/kick.mp3');
 beat[1] = new Audio('./L07/task_material/assets/snare.mp3');
 beat[2] = new Audio('./L07/task_material/assets/hihat.mp3');
 
-var myIntervall;
+let myIntervall;
 
 document.querySelector('#play-button').addEventListener("click", function () {
     definedBeat();
