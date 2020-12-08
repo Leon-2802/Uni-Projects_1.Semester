@@ -1,0 +1,119 @@
+html{
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(102, 102, 102), rgb(77, 77, 77));
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drum-flexbox {
+    display: flex;
+    width: 500px;
+    height: 550px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.drumbutton {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+}
+.drumbutton:hover {
+    cursor: pointer;
+}
+i {
+    font-size: 40px;
+    margin-left: 5%;
+}
+i:hover {
+    color: #ff6666;
+    cursor: pointer;
+}
+
+/*Drum-buttons style*/
+#drum1 {
+    background-color: #D9FFB3;
+}
+#drum1:hover {
+    background-color: #ccff99;
+}
+
+#drum2 {
+    background-color: #B3FFD9;
+}
+#drum2:hover {
+    background-color: #99ffcc;
+}
+
+#drum3 {
+    background-color: #FFB3B3;
+}
+#drum3:hover {
+    background-color: #ff9999;
+}
+
+#drum4 {
+    background-color: #CCFFFF;
+}
+#drum4:hover {
+    background-color: #b3ffff;
+}
+
+#drum5 {
+    background-color: #FFFFCC;
+}
+#drum5:hover {
+    background-color: #ffffb3;
+}
+
+#drum6 {
+    background-color: #FFCCFF;
+}
+#drum6:hover {
+    background-color: #ffb3ff;
+}
+
+#drum7 {
+    background-color: #FFE6CC;
+}
+#drum7:hover {
+    background-color: #ffdab3;
+}
+
+#drum8 {
+    background-color: #E6FFCC;
+}
+#drum8:hover {
+    background-color: #daffb3;
+}
+
+#drum9 {
+    background-color: #B3FFD9;
+}
+#drum9:hover {
+    background-color: #99ffcc;
+}
+
+/* Erklär-Text */
+footer {
+    text-align: center;
+    font-family: monospace;
+    font-size: large;
+    font-weight: bold;
+    color: #99ffbb
+}
+ul {
+    list-style: none;
+}
+li {
+    text-decoration: none;
+}
