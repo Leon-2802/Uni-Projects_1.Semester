@@ -1,13 +1,13 @@
 //sounds:
 var sounds = [];
-sounds[0] = new Audio("./L08/task_material/assets/A.mp3");
-sounds[1] = new Audio("./L08/task_material/assets/C.mp3");
-sounds[2] = new Audio("./L08/task_material/assets/F.mp3");
-sounds[3] = new Audio("./L08/task_material/assets/G.mp3");
-sounds[4] = new Audio("./L08/task_material/assets/hihat.mp3");
+sounds[0] = new Audio("./L08/task_material/assets/A.wav");
+sounds[1] = new Audio("./L08/task_material/assets/B.wav");
+sounds[2] = new Audio("./L08/task_material/assets/bass.wav");
+sounds[3] = new Audio("./L08/task_material/assets/guitar.mp3");
+sounds[4] = new Audio("./L08/task_material/assets/8081.wav");
 sounds[5] = new Audio("./L08/task_material/assets/kick.mp3");
-sounds[6] = new Audio("./L08/task_material/assets/laugh-1.mp3");
-sounds[7] = new Audio("./L08/task_material/assets/laugh-2.mp3");
+sounds[6] = new Audio("./L08/task_material/assets/8082.wav");
+sounds[7] = new Audio("./L08/task_material/assets/8083.wav");
 sounds[8] = new Audio("./L08/task_material/assets/snare.mp3");
 //HTML-Elemente:
 var playButton = document.getElementById("play");
@@ -97,7 +97,7 @@ function stopBeat() {
 //Beat aufnehmen:
 function recordABeat(x) {
     if (boolRecord == true) {
-        beatArray.unshift(x);
+        beatArray.push(x);
     }
 }
 //Toggle Classes:
