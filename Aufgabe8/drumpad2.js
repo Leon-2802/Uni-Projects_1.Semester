@@ -1,3 +1,4 @@
+//sounds:
 var sounds = [];
 sounds[0] = new Audio("./L08/task_material/assets/A.mp3");
 sounds[1] = new Audio("./L08/task_material/assets/C.mp3");
@@ -8,7 +9,12 @@ sounds[5] = new Audio("./L08/task_material/assets/kick.mp3");
 sounds[6] = new Audio("./L08/task_material/assets/laugh-1.mp3");
 sounds[7] = new Audio("./L08/task_material/assets/laugh-2.mp3");
 sounds[8] = new Audio("./L08/task_material/assets/snare.mp3");
-// selectors:
+//HTML-Elemente:
+var playButton = document.getElementById("play");
+var stopButton = document.getElementById("stop");
+//boolean-switches:
+var bool1 = false;
+// Drumpad-Buttons:
 document.querySelector("#drum1").addEventListener("click", function () {
     playSample(0);
 });
@@ -36,25 +42,35 @@ document.querySelector("#drum8").addEventListener("click", function () {
 document.querySelector("#drum9").addEventListener("click", function () {
     playSample(8);
 });
-//function manual play:
+//play/stop-Button:
+playButton.addEventListener("click", function () {
+    toggleClasses(this, stopButton);
+    bool1 = true;
+    console.log(bool1);
+    playSample(beatArray[1]);
+    playSample(beatArray[2]);
+    playSample(beatArray[3]);
+});
+stopButton.addEventListener("click", function () {
+    toggleClasses(this, playButton);
+    while (bool1 == true) {
+        bool1 = false;
+    }
+    console.log(bool1);
+});
+//Manipulierbares Array:
+var beatArray = [];
+beatArray[1] = 5;
+beatArray[2] = 4;
+beatArray[3] = 8;
+//Funktionen
+//Wiederverwendbare Play-Function:
 function playSample(x) {
     sounds[x].play();
 }
-//Beat-Array:
-var beat = [];
-beat[0] = new Audio("./L07/task_material/assets/kick.mp3");
-beat[1] = new Audio("./L07/task_material/assets/snare.mp3");
-beat[2] = new Audio("./L07/task_material/assets/hihat.mp3");
-var myIntervall;
-document.querySelector("#play-button").addEventListener("click", function () {
-    definedBeat();
-});
-//function beat:
-function definedBeat() {
-    beat[0].play();
-    beat[1].play();
-    beat[2].play();
-    //Intervall zwischen den Sounds definiert:
-    myIntervall = setInterval(definedBeat, 500);
+//Toggle Classes:
+function toggleClasses(firstHtmlElement, secondHtmlElement) {
+    firstHtmlElement.classList.add("isHidden");
+    secondHtmlElement.classList.remove("isHidden");
 }
 //# sourceMappingURL=drumpad2.js.map

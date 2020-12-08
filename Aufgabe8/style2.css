@@ -30,6 +30,7 @@ main {
 .drumbutton:hover {
     cursor: pointer;
 }
+
 i {
     font-size: 40px;
     margin-left: 5%;
@@ -37,6 +38,12 @@ i {
 i:hover {
     color: #ff6666;
     cursor: pointer;
+}
+#stop {
+    color: #ff6666;
+}
+.isHidden {
+    display: none !important;
 }
 
 /*Drum-buttons style*/
