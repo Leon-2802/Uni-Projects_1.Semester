@@ -15,8 +15,10 @@ var stopButton = document.getElementById("stop");
 var deleteButton = document.getElementById("delete");
 var recordButtonBlack = document.getElementById("record-black");
 var recordButtonRed = document.getElementById("record-red");
+var i = 0;
 //boolean-switches:
 var boolRecord = false;
+var boolPlayStop = false;
 // Drumpad-Buttons:
 document.querySelector("#drum1").addEventListener("click", function () {
     playSample(0);
@@ -57,15 +59,13 @@ document.querySelector("#drum9").addEventListener("click", function () {
 //play/stop-Button:
 playButton.addEventListener("click", function () {
     toggleClasses(this, stopButton);
-    var beatInterval = setInterval(function () {
-        playSample(beatArray[0]);
-        playSample(beatArray[1]);
-        playSample(beatArray[2]);
-    }, 200);
+    boolPlayStop = true;
+    checkBeat();
 });
 stopButton.addEventListener("click", function () {
     toggleClasses(this, playButton);
-    stopBeat();
+    boolPlayStop = false;
+    checkBeat();
 });
 //Lösch-Button:
 deleteButton.addEventListener("click", function () {
@@ -90,9 +90,19 @@ beatArray[2] = 8;
 function playSample(x) {
     sounds[x].play();
 }
-//Beat stoppen (Seite neu laden):
-function stopBeat() {
-    window.location.reload(false);
+//Beat Start/Stop:
+var beatInterval;
+function checkBeat() {
+    if (boolPlayStop == true) {
+        beatInterval = setInterval(function () {
+            playSample(beatArray[0]);
+            playSample(beatArray[1]);
+            playSample(beatArray[2]);
+        }, 200);
+    }
+    else {
+        clearInterval(beatInterval);
+    }
 }
 //Beat aufnehmen:
 function recordABeat(x) {

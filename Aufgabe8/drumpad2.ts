@@ -17,8 +17,11 @@ const deleteButton: HTMLElement = document.getElementById("delete");
 const recordButtonBlack: HTMLElement = document.getElementById("record-black");
 const recordButtonRed: HTMLElement = document.getElementById("record-red");
 
+let i: number = 0;
+
 //boolean-switches:
 let boolRecord: boolean = false;
+let boolPlayStop: boolean = false;
 
 // Drumpad-Buttons:
 document.querySelector("#drum1").addEventListener("click", function (): void {
@@ -69,16 +72,14 @@ document.querySelector("#drum9").addEventListener("click", function (): void {
 //play/stop-Button:
 playButton.addEventListener("click", function (): void {
     toggleClasses(this, stopButton);
-    const beatInterval = setInterval(function(): void {
-        playSample(beatArray[0]);
-        playSample(beatArray[1]);
-        playSample(beatArray[2]);
-        }, 200);
+    boolPlayStop = true;
+    checkBeat();
 });
 
 stopButton.addEventListener("click", function (): void {
     toggleClasses(this, playButton);
-    stopBeat();
+    boolPlayStop = false;
+    checkBeat();
 });
 
 //Lösch-Button:
@@ -108,9 +109,18 @@ function playSample(x: number): void {
         sounds[x].play();
 }
 
-//Beat stoppen (Seite neu laden):
-function stopBeat(): void {
-    window.location.reload(false);
+//Beat Start/Stop:
+var beatInterval;
+function checkBeat(): void {
+    if (boolPlayStop == true) {
+        beatInterval = setInterval(function(): void {
+            playSample(beatArray[0]);
+            playSample(beatArray[1]);
+            playSample(beatArray[2]);
+            }, 200);
+    } else {
+        clearInterval(beatInterval);
+    }
 }
 
 //Beat aufnehmen:
@@ -125,3 +135,4 @@ function toggleClasses(firstHtmlElement: HTMLElement, secondHtmlElement: HTMLEle
     firstHtmlElement.classList.add("isHidden");
     secondHtmlElement.classList.remove("isHidden");
 }
+
