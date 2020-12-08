@@ -42,6 +42,9 @@ i:hover {
 #stop {
     color: #ff6666;
 }
+#record-red {
+    color: #ff6666;
+}
 .isHidden {
     display: none !important;
 }
