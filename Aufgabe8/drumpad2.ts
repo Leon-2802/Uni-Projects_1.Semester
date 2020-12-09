@@ -17,6 +17,7 @@ const deleteButton: HTMLElement = document.getElementById("delete");
 const recordButtonBlack: HTMLElement = document.getElementById("record-black");
 const recordButtonRed: HTMLElement = document.getElementById("record-red");
 const questionMark: HTMLElement = document.getElementById("question-mark");
+const closeButton: HTMLElement = document.getElementById("close");
 
 let i: number = 0;
 
@@ -96,6 +97,20 @@ recordButtonBlack.addEventListener("click", function(): void{
 recordButtonRed.addEventListener("click", function(): void{
     toggleClasses(this, recordButtonBlack);
     boolRecord = false;
+});
+
+//Erklär-Text:
+questionMark.addEventListener("click", function(): void {
+    toggleClasses(this, closeButton);
+    document.querySelector("#text1").classList.remove("isHidden");
+    document.querySelector("#text2").classList.remove("isHidden");
+    document.querySelector("#text3").classList.remove("isHidden");
+});
+closeButton.addEventListener("click", function(): void {
+    toggleClasses(this, questionMark);
+    document.querySelector("#text1").classList.add("isHidden");
+    document.querySelector("#text2").classList.add("isHidden");
+    document.querySelector("#text3").classList.add("isHidden");
 });
 
 //Manipulierbares Array (Default-Beat):

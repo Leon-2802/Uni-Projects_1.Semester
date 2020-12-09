@@ -131,3 +131,12 @@ li {
 #question-mark {
     font-size: 40px;
 }
+#question-mark:hover {
+    cursor: pointer;
+}
+#close {
+    color: #ff6666;
+}
+#close:hover {
+    cursor: pointer;
+}

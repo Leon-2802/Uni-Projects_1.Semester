@@ -16,6 +16,7 @@ var deleteButton = document.getElementById("delete");
 var recordButtonBlack = document.getElementById("record-black");
 var recordButtonRed = document.getElementById("record-red");
 var questionMark = document.getElementById("question-mark");
+var closeButton = document.getElementById("close");
 var i = 0;
 //boolean-switches:
 var boolRecord = false;
@@ -80,6 +81,19 @@ recordButtonBlack.addEventListener("click", function () {
 recordButtonRed.addEventListener("click", function () {
     toggleClasses(this, recordButtonBlack);
     boolRecord = false;
+});
+//Erklär-Text:
+questionMark.addEventListener("click", function () {
+    toggleClasses(this, closeButton);
+    document.querySelector("#text1").classList.remove("isHidden");
+    document.querySelector("#text2").classList.remove("isHidden");
+    document.querySelector("#text3").classList.remove("isHidden");
+});
+closeButton.addEventListener("click", function () {
+    toggleClasses(this, questionMark);
+    document.querySelector("#text1").classList.add("isHidden");
+    document.querySelector("#text2").classList.add("isHidden");
+    document.querySelector("#text3").classList.add("isHidden");
 });
 //Manipulierbares Array (Default-Beat):
 var beatArray = [];
