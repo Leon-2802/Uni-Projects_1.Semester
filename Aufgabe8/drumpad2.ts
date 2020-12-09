@@ -16,6 +16,7 @@ const stopButton: HTMLElement = document.getElementById("stop");
 const deleteButton: HTMLElement = document.getElementById("delete");
 const recordButtonBlack: HTMLElement = document.getElementById("record-black");
 const recordButtonRed: HTMLElement = document.getElementById("record-red");
+const questionMark: HTMLElement = document.getElementById("question-mark");
 
 let i: number = 0;
 
@@ -114,13 +115,17 @@ var beatInterval: number;
 
 function checkBeat(): void {
     if (boolPlayStop == true) {
-        for (let i: number = 0; i < beatArray.length; i++) {
-            beatInterval = setInterval(function(): void {
+        beatInterval = setInterval( function(): void {
+            if (i < beatArray.length) {
                 playSample(beatArray[i]);
-                }, i * 200);
+                i++;
+            } else {
+                i = 0;
             }
+        }, 200);
+
     } else {
-        window.location.reload(false);
+        clearInterval(beatInterval);
     }
 }
 
@@ -136,7 +141,3 @@ function toggleClasses(firstHtmlElement: HTMLElement, secondHtmlElement: HTMLEle
     firstHtmlElement.classList.add("isHidden");
     secondHtmlElement.classList.remove("isHidden");
 }
-
-/* playSample(beatArray[0]);
-            playSample(beatArray[1]);
-            playSample(beatArray[2]); */
