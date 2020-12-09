@@ -1,5 +1,5 @@
 //sounds:
-let sounds: any = [];
+let sounds: HTMLAudioElement[] = [];
 sounds[0] = new Audio("./L08/task_material/assets/A.wav");
 sounds[1] = new Audio("./L08/task_material/assets/B.wav");
 sounds[2] = new Audio("./L08/task_material/assets/bass.wav");
@@ -110,23 +110,24 @@ function playSample(x: number): void {
 }
 
 //Beat Start/Stop:
-var beatInterval;
+var beatInterval: number;
+
 function checkBeat(): void {
     if (boolPlayStop == true) {
-        beatInterval = setInterval(function(): void {
-            playSample(beatArray[0]);
-            playSample(beatArray[1]);
-            playSample(beatArray[2]);
-            }, 200);
+        for (let i: number = 0; i < beatArray.length; i++) {
+            beatInterval = setInterval(function(): void {
+                playSample(beatArray[i]);
+                }, i * 200);
+            }
     } else {
-        clearInterval(beatInterval);
+        window.location.reload(false);
     }
 }
 
 //Beat aufnehmen:
 function recordABeat(x: number): void {
     if (boolRecord == true) {
-        beatArray.push(x);
+        beatArray.unshift(x);
     }
 }
 
@@ -136,3 +137,6 @@ function toggleClasses(firstHtmlElement: HTMLElement, secondHtmlElement: HTMLEle
     secondHtmlElement.classList.remove("isHidden");
 }
 
+/* playSample(beatArray[0]);
+            playSample(beatArray[1]);
+            playSample(beatArray[2]); */

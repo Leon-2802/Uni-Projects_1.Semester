@@ -94,20 +94,23 @@ function playSample(x) {
 var beatInterval;
 function checkBeat() {
     if (boolPlayStop == true) {
-        beatInterval = setInterval(function () {
-            playSample(beatArray[0]);
-            playSample(beatArray[1]);
-            playSample(beatArray[2]);
-        }, 200);
+        var _loop_1 = function (i_1) {
+            beatInterval = setInterval(function () {
+                playSample(beatArray[i_1]);
+            }, i_1 * 200);
+        };
+        for (var i_1 = 0; i_1 < beatArray.length; i_1++) {
+            _loop_1(i_1);
+        }
     }
     else {
-        clearInterval(beatInterval);
+        window.location.reload(false);
     }
 }
 //Beat aufnehmen:
 function recordABeat(x) {
     if (boolRecord == true) {
-        beatArray.push(x);
+        beatArray.unshift(x);
     }
 }
 //Toggle Classes:
@@ -115,4 +118,7 @@ function toggleClasses(firstHtmlElement, secondHtmlElement) {
     firstHtmlElement.classList.add("isHidden");
     secondHtmlElement.classList.remove("isHidden");
 }
+/* playSample(beatArray[0]);
+            playSample(beatArray[1]);
+            playSample(beatArray[2]); */ 
 //# sourceMappingURL=drumpad2.js.map
