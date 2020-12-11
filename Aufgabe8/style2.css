@@ -38,7 +38,7 @@ i {
 }
 i:hover {
     color: #ff6666;
-    cursor: pointer;
+    cursor: pointer; 
 }
 #stop {
     color: #ff6666;
@@ -116,6 +116,11 @@ i:hover {
 
 /* Erklär-Text */
 footer {
+    width: 80vw;
+    margin-left: 9.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: monospace;
     font-size: large;
