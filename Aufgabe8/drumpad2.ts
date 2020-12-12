@@ -26,7 +26,61 @@ let boolRecord: boolean = false;
 let boolPlayStop: boolean = false;
 
 // Drumpad-Buttons:
-document.querySelector("#drum1").addEventListener("click", function (): void {
+document.addEventListener("keydown", function (event: KeyboardEvent): void {
+    switch(event.keyCode) {
+        case 49:
+            playSample(0);
+            recordABeat(0);
+            break;
+        case 50:
+            playSample(1);
+            recordABeat(1);
+            break;
+        case 51:
+            playSample(2);
+            recordABeat(2);
+            break;
+        case 52:
+            playSample(3);
+            recordABeat(3);
+            break;
+        case 53:
+            playSample(4);
+            recordABeat(4);
+            break;
+        case 54:
+            playSample(5);
+            recordABeat(5);
+            break;
+        case 55:
+            playSample(6);
+            recordABeat(6);
+            break;
+        case 56:
+            playSample(7);
+            recordABeat(7);
+            break;
+        case 57:
+            playSample(8);
+            recordABeat(8);
+            break;
+        case 81:
+            playStopKeyboard();
+            break;
+        case 87:
+            recordKeyboard();
+            break;
+        case 69:
+            beatArray.length = 0;
+            deleteButton.setAttribute("style", "color: " + "#ff6666");
+            resetColor = setTimeout(function(): void {
+            deleteButton.setAttribute("style", "color: " + "black");
+            }, 800);
+            break;
+    }
+});
+
+document.querySelector("#drum1").addEventListener("click", function(): void {
     playSample(0);
     recordABeat(0);
 });
@@ -85,16 +139,21 @@ stopButton.addEventListener("click", function (): void {
 });
 
 //Lösch-Button:
+var resetColor: number;
 deleteButton.addEventListener("click", function(): void {
     beatArray.length = 0;
+    deleteButton.setAttribute("style", "color: " + "#ff6666");
+    resetColor = setTimeout(function(): void {
+        deleteButton.setAttribute("style", "color: " + "black");
+    }, 800);
 });
 
 //Aufnahme-Button:
-recordButtonBlack.addEventListener("click", function(): void{
+recordButtonBlack.addEventListener("click", function(): void {
     toggleClasses(this, recordButtonRed);
     boolRecord = true;
 });
-recordButtonRed.addEventListener("click", function(): void{
+recordButtonRed.addEventListener("click", function(): void {
     toggleClasses(this, recordButtonBlack);
     boolRecord = false;
 });
@@ -155,4 +214,30 @@ function recordABeat(x: number): void {
 function toggleClasses(firstHtmlElement: HTMLElement, secondHtmlElement: HTMLElement): void {
     firstHtmlElement.classList.add("isHidden");
     secondHtmlElement.classList.remove("isHidden");
+}
+
+//Play-Stop-Button Keyboard:
+function playStopKeyboard(): void {
+    if (boolPlayStop == false) {
+        toggleClasses(playButton, stopButton);
+        boolPlayStop = true;
+        checkBeat();
+    }
+    else if (boolPlayStop == true) {
+        toggleClasses(stopButton, playButton);
+        boolPlayStop = false;
+        checkBeat();
+    }
+}
+
+//Record Button Keyboard:
+function recordKeyboard(): void {
+    if (boolRecord == false) {
+        toggleClasses(recordButtonBlack, recordButtonRed);
+        boolRecord = true;
+    }
+    else if (boolRecord == true) {
+        toggleClasses(recordButtonRed, recordButtonBlack);
+        boolRecord = false;
+    }
 }

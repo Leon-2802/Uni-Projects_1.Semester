@@ -22,6 +22,59 @@ var i = 0;
 var boolRecord = false;
 var boolPlayStop = false;
 // Drumpad-Buttons:
+document.addEventListener("keydown", function (event) {
+    switch (event.keyCode) {
+        case 49:
+            playSample(0);
+            recordABeat(0);
+            break;
+        case 50:
+            playSample(1);
+            recordABeat(1);
+            break;
+        case 51:
+            playSample(2);
+            recordABeat(2);
+            break;
+        case 52:
+            playSample(3);
+            recordABeat(3);
+            break;
+        case 53:
+            playSample(4);
+            recordABeat(4);
+            break;
+        case 54:
+            playSample(5);
+            recordABeat(5);
+            break;
+        case 55:
+            playSample(6);
+            recordABeat(6);
+            break;
+        case 56:
+            playSample(7);
+            recordABeat(7);
+            break;
+        case 57:
+            playSample(8);
+            recordABeat(8);
+            break;
+        case 81:
+            playStopKeyboard();
+            break;
+        case 87:
+            recordKeyboard();
+            break;
+        case 69:
+            beatArray.length = 0;
+            deleteButton.setAttribute("style", "color: " + "#ff6666");
+            resetColor = setTimeout(function () {
+                deleteButton.setAttribute("style", "color: " + "black");
+            }, 800);
+            break;
+    }
+});
 document.querySelector("#drum1").addEventListener("click", function () {
     playSample(0);
     recordABeat(0);
@@ -70,8 +123,13 @@ stopButton.addEventListener("click", function () {
     checkBeat();
 });
 //Lösch-Button:
+var resetColor;
 deleteButton.addEventListener("click", function () {
     beatArray.length = 0;
+    deleteButton.setAttribute("style", "color: " + "#ff6666");
+    resetColor = setTimeout(function () {
+        deleteButton.setAttribute("style", "color: " + "black");
+    }, 800);
 });
 //Aufnahme-Button:
 recordButtonBlack.addEventListener("click", function () {
@@ -133,5 +191,29 @@ function recordABeat(x) {
 function toggleClasses(firstHtmlElement, secondHtmlElement) {
     firstHtmlElement.classList.add("isHidden");
     secondHtmlElement.classList.remove("isHidden");
+}
+//Play-Stop-Button Keyboard:
+function playStopKeyboard() {
+    if (boolPlayStop == false) {
+        toggleClasses(playButton, stopButton);
+        boolPlayStop = true;
+        checkBeat();
+    }
+    else if (boolPlayStop == true) {
+        toggleClasses(stopButton, playButton);
+        boolPlayStop = false;
+        checkBeat();
+    }
+}
+//Record Button Keyboard:
+function recordKeyboard() {
+    if (boolRecord == false) {
+        toggleClasses(recordButtonBlack, recordButtonRed);
+        boolRecord = true;
+    }
+    else if (boolRecord == true) {
+        toggleClasses(recordButtonRed, recordButtonBlack);
+        boolRecord = false;
+    }
 }
 //# sourceMappingURL=drumpad2.js.map
