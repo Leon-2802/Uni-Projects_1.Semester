@@ -175,7 +175,7 @@ function checkBeat() {
             else {
                 i = 0;
             }
-        }, 200);
+        }, 500);
     }
     else {
         clearInterval(beatInterval);
@@ -184,7 +184,7 @@ function checkBeat() {
 //Beat aufnehmen:
 function recordABeat(x) {
     if (boolRecord == true) {
-        beatArray.unshift(x);
+        beatArray.push(x);
     }
 }
 //Toggle Classes:

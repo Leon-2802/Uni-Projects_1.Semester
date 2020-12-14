@@ -196,7 +196,7 @@ function checkBeat(): void {
             } else {
                 i = 0;
             }
-        }, 200);
+        }, 500);
 
     } else {
         clearInterval(beatInterval);
@@ -206,7 +206,7 @@ function checkBeat(): void {
 //Beat aufnehmen:
 function recordABeat(x: number): void {
     if (boolRecord == true) {
-        beatArray.unshift(x);
+        beatArray.push(x);
     }
 }
 

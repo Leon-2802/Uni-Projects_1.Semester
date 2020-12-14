@@ -53,6 +53,9 @@ i:hover {
 .isHidden {
     display: none !important;
 }
+#delete:hover {
+    color: #ff6666;
+}
 
 /*Drum-buttons style*/
 #drum1 {
