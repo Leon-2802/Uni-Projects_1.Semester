@@ -27,7 +27,7 @@ let boolPlayStop: boolean = false;
 
 // Drumpad-Buttons:
 document.addEventListener("keydown", function (event: KeyboardEvent): void {
-    switch(event.keyCode) {
+    switch (event.keyCode) {
         case 49:
             playSample(0);
             recordABeat(0);

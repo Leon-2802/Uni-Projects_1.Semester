@@ -1,34 +1,69 @@
 body {
     background-color: gray;  
-    text-align: center; 
+    height: 100%;
 }
-
+h1 {
+    margin-left: 30%;
+}
+h2 {
+    color: white;
+    margin-left: 30%;
+}
+#counter {
+    font-size: 24px;
+}
 #new-task {
-    width: 300px;
-    height: 30px;
+    margin-left: 30%;
+    width: 492.5px;
+    height: 50px;
+    font-size: 20px;
+}
+#new-task:focus {
+    border-color: rgb(102, 140, 255);
+    outline: 0;
+    box-shadow: 0 0 0 1px rgba(102, 140, 255, 0.5);
 }
 
+div{
+    position: relative;
+    width: 500px;
+    height: 70px;
+    background-color: white;
+    margin-left: 30%;
+}
 p {
     font-size: 30px;
 }
-.hidden {
+span {
+    font-size: 30px;
+}
+.isHidden {
     display: none !important;
 }
-#circle{
-    margin-right: 20px;
-}
-#circle:hover {
-    cursor: pointer;
-}
-#check{
-    margin-right: 20px;
-}
-#check:hover {
-    cursor: pointer;
-}
-#trash{
+.fa-circle{
     margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
 }
-#trash:hover {
+.fa-circle:hover {
     cursor: pointer;
+}
+.fa-check-circle{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+.fa-check-circle:hover {
+    cursor: pointer;
+}
+.fa-trash-alt{
+    position: absolute;
+    left: 90%;
+    opacity: 50%;
+    font-size: 30px;
+    transition: all 0.4s ease-out;
+}
+.fa-trash-alt:hover {
+    cursor: pointer;
+    opacity: 100%;
 }
