@@ -1,9 +1,12 @@
 var zaehler: number = 0;
-var userTask: any = document.getElementById("new-task");
+var userTask: any = document.getElementById("new-task"); //Welcher Data-Type?
 
 document.addEventListener("keydown", function(event: KeyboardEvent): void { //Löst "CreateTask" function aus
     if (event.keyCode == 13) {
             createTask();
+            setTimeout(function(): void {
+                clearInput();
+            }, 100);
     }
 });
 
@@ -18,6 +21,7 @@ function createTask (): void { //Wie geht es, dass die eventListener innerhalb d
     let icon2: HTMLElement = document.createElement("i");
     icon2.className = "far fa-check-circle isHidden";
     let text: HTMLSpanElement = document.createElement("span");
+    text.className = "task-text";
     text.innerHTML = userTask.value;
     let icon3: HTMLElement = document.createElement("i");
     icon3.className = "fas fa-trash-alt";
@@ -53,4 +57,8 @@ function createTask (): void { //Wie geht es, dass die eventListener innerhalb d
 
 function counter(): void {
     document.querySelector("#counter").innerHTML = zaehler + " tasks are";
+}
+
+function clearInput(): void {
+    userTask.value = "";
 }

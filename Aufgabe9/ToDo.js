@@ -1,8 +1,11 @@
 var zaehler = 0;
-var userTask = document.getElementById("new-task");
+var userTask = document.getElementById("new-task"); //Welcher Data-Type?
 document.addEventListener("keydown", function (event) {
     if (event.keyCode == 13) {
         createTask();
+        setTimeout(function () {
+            clearInput();
+        }, 100);
     }
 });
 //Tasks als erledigt markieren: ?
@@ -14,6 +17,7 @@ function createTask() {
     var icon2 = document.createElement("i");
     icon2.className = "far fa-check-circle isHidden";
     var text = document.createElement("span");
+    text.className = "task-text";
     text.innerHTML = userTask.value;
     var icon3 = document.createElement("i");
     icon3.className = "fas fa-trash-alt";
@@ -43,5 +47,8 @@ function createTask() {
 }
 function counter() {
     document.querySelector("#counter").innerHTML = zaehler + " tasks are";
+}
+function clearInput() {
+    userTask.value = "";
 }
 //# sourceMappingURL=ToDo.js.map

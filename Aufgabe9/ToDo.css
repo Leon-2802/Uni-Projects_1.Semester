@@ -15,36 +15,52 @@ h2 {
     font-size: 24px;
 }
 #new-task {
-    margin-left: 25%;
-    margin-bottom: 5px;
-    width: 1000px;
+    margin-left: 23%;
+    width: 53.5%;
     height: 50px;
     font-size: 23px;
     background-color: #2d5986;
     color: #f2f2f2;
+}
+::placeholder{
+    color: #d9d9d9;
+    opacity: 1;
 }
 #new-task:focus {
     border-color: #e6e6e6;
     outline: 0;
     box-shadow: 0 0 0 1px rgba(230, 230, 230, 0.5);
 }
+#counter {
+    font-size: 23px;
+}
 
 div{
     position: relative;
-    width: 1000px;
+    width: 54%;
     height: 70px;
     background-color: #2d5986;
-    margin-left: 25%;
-    margin-bottom: 3px;
+    margin: 0 auto 3px auto;
     color: #f2f2f2;
 }
-span {
+
+/*@media (max-width: 1400px) {
+    #new-task {
+        width: 700px;
+        margin-left: 20%;
+    }
+}*/
+.task-text {
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 22px;
     font-size: 23px;
 }
 .isHidden {
     display: none !important;
 }
 .fa-circle{
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 30px;
@@ -54,6 +70,7 @@ span {
     cursor: pointer;
 }
 .fa-check-circle{
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 30px;
@@ -64,6 +81,7 @@ span {
 }
 .fa-trash-alt{
     position: absolute;
+    margin-top: 20px;
     left: 90%;
     opacity: 50%;
     font-size: 30px;
