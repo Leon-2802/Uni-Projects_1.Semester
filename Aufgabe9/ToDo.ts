@@ -9,7 +9,7 @@ document.addEventListener("keydown", function(event: KeyboardEvent): void { //L�
 
 //Tasks als erledigt markieren: ?
 
-function createTask (): void {
+function createTask (): void { //Wie geht es, dass die eventListener innerhalb der Funktion aufgerufen werden können?
 
     //Elemente jeder Task, die hinzugefügt werden müssen:
     let container: HTMLDivElement = document.createElement("div");
@@ -34,7 +34,7 @@ function createTask (): void {
     counter();
 
     //Kreis-, Abhaken- und Lösch-Button Event Listener mit jeweiliger Funktion
-    icon1.addEventListener("click", function(): void {
+    icon1.addEventListener("click", function(): void { //Wie geht es, dass das richtige Element genutzt wird?
         icon1.classList.add("isHidden");
         icon2.classList.remove("isHidden");
     });
