@@ -1,14 +1,27 @@
 var zaehler = 0;
 var userTask = document.getElementById("new-task"); //Welcher Data-Type?
+var checkInputBool = false;
+var preventEvent = false;
 document.addEventListener("keydown", function (event) {
-    if (event.keyCode == 13) {
+    if (event.keyCode == 13 && checkInputBool == true) {
         createTask();
         setTimeout(function () {
             clearInput();
         }, 100);
+        preventEvent = false;
     }
 });
-//Tasks als erledigt markieren: ?
+//createTask blockieren
+document.addEventListener("click", function () {
+    if (preventEvent == false) {
+        checkInputBool = false;
+    }
+});
+//createTask freischalten
+userTask.addEventListener("click", function () {
+    checkInputBool = true;
+    preventEvent = true;
+});
 function createTask() {
     //Elemente jeder Task, die hinzugefügt werden müssen:
     var container = document.createElement("div");

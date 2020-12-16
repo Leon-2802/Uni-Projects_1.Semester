@@ -1,16 +1,31 @@
 var zaehler: number = 0;
 var userTask: any = document.getElementById("new-task"); //Welcher Data-Type?
 
+var checkInputBool: boolean = false;
+var preventEvent: boolean = false;
+
 document.addEventListener("keydown", function(event: KeyboardEvent): void { //Löst "CreateTask" function aus
-    if (event.keyCode == 13) {
+    if (event.keyCode == 13 && checkInputBool == true) {
             createTask();
             setTimeout(function(): void {
                 clearInput();
             }, 100);
+            preventEvent = false;
     }
 });
 
-//Tasks als erledigt markieren: ?
+//createTask blockieren
+document.addEventListener("click", function(): void {
+    if (preventEvent == false) {
+    checkInputBool = false;
+    }
+});
+
+//createTask freischalten
+userTask.addEventListener("click", function(): void {
+    checkInputBool = true;
+    preventEvent = true;
+});
 
 function createTask (): void { //Wie geht es, dass die eventListener innerhalb der Funktion aufgerufen werden können?
 
