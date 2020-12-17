@@ -43,13 +43,6 @@ div{
     margin: 0 auto 3px auto;
     color: #f2f2f2;
 }
-
-/*@media (max-width: 1400px) {
-    #new-task {
-        width: 700px;
-        margin-left: 20%;
-    }
-}*/
 .task-text {
     position: absolute;
     margin-left: 6px;
@@ -82,7 +75,7 @@ div{
 .fa-trash-alt{
     position: absolute;
     margin-top: 20px;
-    left: 90%;
+    left: 95%;
     opacity: 50%;
     font-size: 30px;
     color: #ffb84d;
