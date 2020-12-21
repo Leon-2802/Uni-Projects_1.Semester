@@ -47,10 +47,12 @@ function createTask() {
     icon1.addEventListener("click", function () {
         icon1.classList.add("isHidden");
         icon2.classList.remove("isHidden");
+        text.setAttribute("style", "text-decoration: " + "line-through");
     });
     icon2.addEventListener("click", function () {
         icon2.classList.add("isHidden");
         icon1.classList.remove("isHidden");
+        text.setAttribute("style", "text-decoration: " + "none");
     });
     icon3.addEventListener("click", function () {
         document.body.removeChild(container);

@@ -56,11 +56,13 @@ function createTask (): void { //Wie geht es, dass die eventListener innerhalb d
     icon1.addEventListener("click", function(): void { //Wie geht es, dass das richtige Element genutzt wird?
         icon1.classList.add("isHidden");
         icon2.classList.remove("isHidden");
+        text.setAttribute("style", "text-decoration: " + "line-through");
     });
 
     icon2.addEventListener("click", function(): void {
         icon2.classList.add("isHidden");
         icon1.classList.remove("isHidden");
+        text.setAttribute("style", "text-decoration: " + "none");
     });
 
     icon3.addEventListener("click", function(): void {
