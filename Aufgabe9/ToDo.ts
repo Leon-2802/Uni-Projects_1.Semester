@@ -1,5 +1,5 @@
 var zaehler: number = 0;
-var userTask: any = document.getElementById("new-task"); //Ich habe es hier mit HTMLInputElement versucht, warum ist das nicht erlaubt?
+var userTask: any = (document.getElementById("new-task")); //Ich habe es hier mit HTMLInputElement versucht, warum ist das nicht erlaubt?
 
 var checkInputBool: boolean = false;
 var preventEvent: boolean = false;
