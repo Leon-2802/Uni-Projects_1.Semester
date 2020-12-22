@@ -1,9 +1,9 @@
 var zaehler = 0;
-var userTask = document.getElementById("new-task"); //Welcher Data-Type?
+var userTask = document.getElementById("new-task"); //Ich habe es hier mit HTMLInputElement versucht, warum ist das nicht erlaubt?
 var checkInputBool = false;
 var preventEvent = false;
 document.addEventListener("keydown", function (event) {
-    if (event.keyCode == 13 && checkInputBool == true) {
+    if (event.code == "Enter" && checkInputBool == true) {
         createTask();
         setTimeout(function () {
             clearInput();
