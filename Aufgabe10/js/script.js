@@ -36,6 +36,9 @@ var inputDOMElement;
 var addButtonDOMElement;
 var todosDOMElement;
 var counterDOMElement;
+var openDOMElement;
+var doneDOMElement;
+var artyomOn = false;
 /**
  * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
  * initialisiert werden
@@ -50,11 +53,15 @@ window.addEventListener("load", function () {
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
+    openDOMElement = document.querySelector("#open");
+    doneDOMElement = document.querySelector("#done");
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
      * auf den AddToDo Button gesetzt werden.
      */
-    addButtonDOMElement.addEventListener("click", addTodo);
+    addButtonDOMElement.addEventListener("click", function () {
+        addTodo(inputDOMElement.value);
+    });
     /**
      * Initial soll einmal die Liste an bereit definierten ToDos
      * aus den Arrays in den DOM gezeichnet werden.
@@ -104,13 +111,18 @@ function drawListToDOM() {
     }
     updateCounter();
 }
+//done / open-Task Variablen für den Counter:
+var done = 1;
+var openTask = 2;
 function updateCounter() {
     counterDOMElement.innerHTML = todosArray.length + " in total";
+    openDOMElement.innerHTML = openTask + " tasks open";
+    doneDOMElement.innerHTML = done + " tasks done";
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
  */
-function addTodo() {
+function addTodo(text) {
     /**
      * Zunächst wird geprüft, ob das Input-Feld nicht leer ist
      * (ansonsten würde ein leerer ToDo-Text erstellt werden,
@@ -130,6 +142,16 @@ function addTodo() {
          * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
          * wird wieder getriggert
          */
+        openTask++;
+        drawListToDOM();
+    }
+    if (artyomOn == true) {
+        todosArray.unshift({
+            text: text,
+            checked: false
+        });
+        artyomOn = false;
+        openTask++;
         drawListToDOM();
     }
 }
@@ -150,7 +172,16 @@ function toggleCheckState(index) {
      * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
      * Kurs behandelt wurden) nutzen.
      */
-    todosArray[index].checked = !todosArray[index].checked;
+    if (todosArray[index].checked == true) {
+        todosArray[index].checked = false;
+        done--;
+        openTask++;
+    }
+    else if (todosArray[index].checked == false) {
+        todosArray[index].checked = true;
+        done++;
+        openTask--;
+    }
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
@@ -167,6 +198,12 @@ function deleteTodo(index) {
      * Jetzt muss diese Stelle beider Arrays gelöscht werden,
      * das ToDo-Text-Array und das Checked/Unchecked-Array
      */
+    if (todosArray[index].checked == true) {
+        done--;
+    }
+    else if (todosArray[index].checked == false) {
+        openTask--;
+    }
     todosArray.splice(index, 1);
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
@@ -174,4 +211,37 @@ function deleteTodo(index) {
      */
     drawListToDOM();
 }
+//Sprachbefehl-Stuff:
+window.addEventListener("load", function () {
+    var artyom = new Artyom();
+    artyom.addCommands({
+        smart: true,
+        indexes: ["Erstelle Aufgabe *"],
+        action: function (i, wildcard) {
+            artyomOn = true;
+            addTodo(wildcard);
+        }
+    });
+    document.querySelector("#start-voice").addEventListener("click", function () {
+        startArtyom();
+        artyom.say("Hallo wie geht's! Ich bin Artyom, sag mir mit dem Schlüsselwort Erstelle Aufgabe was ich zur Liste hinzufügen soll.");
+    });
+    document.querySelector("#stop-voice").addEventListener("click", function () {
+        stopArtyom();
+        artyom.say("Und tschüss!");
+    });
+    function startArtyom() {
+        artyom.initialize({
+            lang: "de-DE",
+            continuous: true,
+            listen: true,
+            interimResults: true,
+            debug: true,
+            speed: 1
+        });
+    }
+    function stopArtyom() {
+        artyom.fatality();
+    }
+});
 //# sourceMappingURL=script.js.map

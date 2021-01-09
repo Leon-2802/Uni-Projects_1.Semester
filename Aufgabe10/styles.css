@@ -12,6 +12,12 @@ main {
 #counter {
     color: grey;
 }
+#open {
+    color: grey;
+}
+#done {
+    color: grey;
+}
 
 .inputGroup {
     position: relative;
@@ -70,7 +76,7 @@ main {
     left: 5px;
     top: 5px;
 }
-.check.false i {
+.check.false i { /* setzte den Wert für das check-icon, wenn das dazugehörige Boolean false ist! */
     display: none;
 }
 
