@@ -250,7 +250,14 @@ window.addEventListener("load", function(): void {
     });
 
     document.querySelector("#start-voice").addEventListener("click", function(): void {
+        artyom.dontObey();
+        artyom.initialize({
+            lang: "de-DE"
+        });
         artyom.say("Hallo wie geht's! Ich bin Artyom, sag mir mit dem Schlüsselwort Erstelle Aufgabe was ich zur Liste hinzufügen soll.");
+        setTimeout(function (): void {
+            artyom.obey();
+        }, 8000);
         startArtyom();
     });
     document.querySelector("#stop-voice").addEventListener("click", function(): void {
