@@ -121,6 +121,11 @@ function drawListToDOM(): void {
 
         // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
         todosDOMElement.appendChild(todo);
+        
+        //Localstorage:
+        const key: string = inputDOMElement.value;
+        const storageValue: string = inputDOMElement.value;
+        localStorage.setItem(key, storageValue);
     }
 
     updateCounter();

@@ -104,6 +104,10 @@ function drawListToDOM() {
         });
         // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
         todosDOMElement.appendChild(todo);
+        //Localstorage:
+        var key = inputDOMElement.value;
+        var storageValue = inputDOMElement.value;
+        localStorage.setItem(key, storageValue);
     };
     // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
     for (var index = 0; index < todosArray.length; index++) {

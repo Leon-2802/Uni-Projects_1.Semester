@@ -19,6 +19,13 @@ main {
     color: grey;
 }
 
+#start-voice:hover {
+    cursor: pointer;
+}
+#stop-voice:hover {
+    cursor: pointer;
+}
+
 .inputGroup {
     position: relative;
 }
@@ -90,4 +97,11 @@ main {
 
 .trash:hover {
     color: black;
+}
+
+#clear {
+    margin-top: 20px;
+}
+#clear:hover {
+    cursor: pointer;
 }
