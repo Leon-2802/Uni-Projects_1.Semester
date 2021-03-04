@@ -7,3 +7,15 @@ Portfolio no.1: https://leon-2802.github.io/Uni-Projects_1.Semester/Portfolio/ow
 Portfolio no.2: https://leon-2802.github.io/Uni-Projects_1.Semester/Aufgabe%203/own_portfolio.html
 
 Christmas Cards: https://leon-2802.github.io/Uni-Projects_1.Semester/Aufgabe%204/Menu.html
+
+consoleLog: https://leon-2802.github.io/Uni-Projects_1.Semester/consoleLog/emission.html
+
+emission map: https://leon-2802.github.io/Uni-Projects_1.Semester/emissionsMap/emission2.html
+
+drumpad no.1: https://leon-2802.github.io/Uni-Projects_1.Semester/drumpad/drumpad.html
+
+drumpad no.2: https://leon-2802.github.io/Uni-Projects_1.Semester/drumpad2/drumpad2.html
+
+todo-App: https://leon-2802.github.io/Uni-Projects_1.Semester/todoApp/ToDoList.html
+
+todo-app with voice commands: https://leon-2802.github.io/Uni-Projects_1.Semester/voiceCommandsTodo/todo-app.html
