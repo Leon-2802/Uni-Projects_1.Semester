@@ -6,7 +6,7 @@ Portfolio no.1: https://leon-2802.github.io/Uni-Projects_1.Semester/Portfolio/ow
 
 Portfolio no.2: https://leon-2802.github.io/Uni-Projects_1.Semester/Portfolio2/own_portfolio.html
 
-Christmas Cards: https://leon-2802.github.io/Uni-Projects_1.Semester/Aufgabe%204/Menu.html
+Christmas Cards: https://leon-2802.github.io/Uni-Projects_1.Semester/christmasCards/Menu.html
 
 consoleLog: https://leon-2802.github.io/Uni-Projects_1.Semester/consoleLog/emission.html
 
