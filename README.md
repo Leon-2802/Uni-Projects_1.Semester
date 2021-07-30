@@ -1,6 +1,6 @@
 University Projects from my 1. Semester
 
-Link to the Projects:
+Links to the Projects:
 
 Portfolio no.1: https://leon-2802.github.io/Uni-Projects_1.Semester/Portfolio/own_portfolio.html
 
